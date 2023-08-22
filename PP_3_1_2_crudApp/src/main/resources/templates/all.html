@@ -23,9 +23,8 @@
     <div class="row">
         <div class="col-md-4 mb-4" th:each="user : ${users}">
             <div class="card">
-                <a class="card-header font-weight-bold" th:href="@{/users/{id}(id=${user.getId()})}" th:text="|Id: ${user.getId()}|" />
+                <a class="card-header font-weight-bold" th:href="@{/users/{id}(id=${user.getId()})}" th:text="|Имя: ${user.getFirstName()}|" />
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item font-weight-bold" th:text="|Имя: ${user.getFirstName()}|"/>
                     <li class="list-group-item font-weight-bold" th:text="|Фамилия: ${user.getLastName()}|"/>
                     <li class="list-group-item font-weight-bold" th:text="|Почта: ${user.getEmail()}|"/>
                 </ul>
